@@ -71,7 +71,9 @@ There are 2304 missing values, which represent 13% of the total values.
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
 ```
-For this assignment, the mean strategy has been chosen, that is for each missing value in a interval, the mean of this interval is chosen.
+For this assignment the mean strategy has been chosen.
+
+That is for each missing value in a interval, the mean of this interval is chosen.
 ````
 
 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
