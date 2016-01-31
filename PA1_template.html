@@ -222,7 +222,7 @@ df$date &lt;- as.Date(df$date,&quot;%Y-%m-%d&quot;)
 <p>For this part of the assignment, you can ignore the missing values in the dataset.</p>
 
 <ol>
-<li>Calculate the total number of steps taken per day</li>
+<li>Make a histogram of the total number of steps taken each day</li>
 </ol>
 
 <pre><code class="r">dfAggrSum &lt;- aggregate(steps~date, data=df, FUN=sum)
