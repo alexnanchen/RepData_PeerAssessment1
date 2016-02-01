@@ -98,7 +98,7 @@ For this part of the assignment, you can ignore the missing values in the datase
     
     ```r
     dfNoNAAggrSum <- aggregate(steps~date, data=dfNoNA, FUN=sum)
-    hist(dfNoNAAggrSum$steps,main="Number of steps per day (with inputed malues)",xlab="Number steps per day")
+    hist(dfNoNAAggrSum$steps,main="Number of steps per day (with imputed values)",xlab="Number steps per day")
     ```
     
     ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
