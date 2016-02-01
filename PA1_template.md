@@ -60,7 +60,7 @@ The **median** of the  average total number of steps taken per day is:  10765
     stepsNb <- dfAggrIMean$steps[which.max(dfAggrIMean$steps)]
     ```
 
-Interval 835 contains the maximum number of steps, which is: 206 steps.
+    Interval 835 contains the maximum number of steps, which is: 206 steps.
 
 ## Imputing missing values
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
