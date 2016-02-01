@@ -7,7 +7,6 @@ Show any code that is needed to
 
     
     ```r
-    invisible(Sys.setlocale("LC_ALL",locale="en_US.utf8"))
     unzip("activity.zip")
     df <- read.csv("activity.csv", header=TRUE, sep=",")
     df$date <- as.Date(df$date,"%Y-%m-%d")
@@ -34,9 +33,9 @@ For this part of the assignment, you can ignore the missing values in the datase
     med <- median(dfAggrSum$steps)
     ```
 
-The **mean** of the  average total number of steps taken per day is: 10766.19
+    The **mean** of the  average total number of steps taken per day is: 10766.19
 
-The **median** of the  average total number of steps taken per day is:  10765
+    The **median** of the  average total number of steps taken per day is:  10765
 
 
 ## What is the average daily activity pattern?
@@ -99,7 +98,7 @@ The **median** of the  average total number of steps taken per day is:  10765
     
     ```r
     dfNoNAAggrSum <- aggregate(steps~date, data=dfNoNA, FUN=sum)
-    hist(dfNoNAAggrSum$steps,main="Number of steps per day (with inputed values)",xlab="Number steps per day")
+    hist(dfNoNAAggrSum$steps,main="Number of steps per day (with inputed malues)",xlab="Number steps per day")
     ```
     
     ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
@@ -110,11 +109,11 @@ The **median** of the  average total number of steps taken per day is:  10765
     medI <- median(dfNoNAAggrSum$steps)
     ```
 
-The **mean** of the  average total number of steps taken per day for the imputed dataset is: 10766.19
+    The **mean** of the  average total number of steps taken per day for the imputed dataset is: 10766.19
 
-The **median** of the  average total number of steps taken per day for the imputed dataset is:  10766.19
+    The **median** of the  average total number of steps taken per day for the imputed dataset is:  10766.19
 
-Before imputing, the median was one unit lower, now both mean and median are the same.
+    Before imputing, the median was one unit lower, now both mean and median are the same.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 1. Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
@@ -141,5 +140,5 @@ Before imputing, the median was one unit lower, now both mean and median are the
     
     ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
-It seem    s that on average, people walk more and more regulary accross the day during weekends.
+    It seem    s that on average, people walk more and more regulary accross the day during weekends.
 
