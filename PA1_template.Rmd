@@ -6,6 +6,7 @@ Show any code that is needed to
 - Process/transform the data (if necessary) into a format suitable for your analysis
 
     ```{r, echo=TRUE}
+    invisible(Sys.setlocale("LC_ALL",locale="en_US.utf8"))
     unzip("activity.zip")
     df <- read.csv("activity.csv", header=TRUE, sep=",")
     df$date <- as.Date(df$date,"%Y-%m-%d")
@@ -60,7 +61,7 @@ Interval `r format(intervalNb)` contains the maximum number of steps, which is: 
     totalValues <-  length(df$steps)
     ```
 
-There are `r format(totalMissing)` missing values, which represent `r format(totalMissing/totalValues*100,digits=2)`% of the total values.
+    There are `r format(totalMissing)` missing values, which represent `r format(totalMissing/totalValues*100,digits=2)`% of the total values.
 
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 

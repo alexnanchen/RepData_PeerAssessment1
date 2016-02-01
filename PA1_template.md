@@ -7,6 +7,7 @@ Show any code that is needed to
 
     
     ```r
+    invisible(Sys.setlocale("LC_ALL",locale="en_US.utf8"))
     unzip("activity.zip")
     df <- read.csv("activity.csv", header=TRUE, sep=",")
     df$date <- as.Date(df$date,"%Y-%m-%d")
@@ -70,7 +71,7 @@ Interval 835 contains the maximum number of steps, which is: 206 steps.
     totalValues <-  length(df$steps)
     ```
 
-There are 2304 missing values, which represent 13% of the total values.
+    There are 2304 missing values, which represent 13% of the total values.
 
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
