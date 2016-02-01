@@ -131,13 +131,6 @@ Before imputing, the median was one unit lower, now both mean and median are the
     
     ```r
     library(ggplot2)
-    ```
-    
-    ```
-    ## Error in library(ggplot2): there is no package called 'ggplot2'
-    ```
-    
-    ```r
     ggplot(dfAggregated, aes(interval,steps)) +
         geom_line(aes(colour=week)) +
         facet_wrap(~week, ncol=1) +
@@ -145,9 +138,7 @@ Before imputing, the median was one unit lower, now both mean and median are the
         theme(strip.text.x = element_text(size = 15))
     ```
     
-    ```
-    ## Error in eval(expr, envir, enclos): could not find function "ggplot"
-    ```
+    ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
 It seems that on average, people walk more and more regulary accross the day during weekends.
 
