@@ -52,9 +52,8 @@ plot(dfAggrIMean, type="l", xlab="5 minutes intervals", ylab="Average number of 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
-dfAggrISum <- aggregate(steps~interval, data=df, FUN=sum)
-intervalNb <- dfAggrIMean$interval[which.max(dfAggrISum$steps)]
-stepsNb <- dfAggrIMean$steps[which.max(dfAggrISum$steps)]
+intervalNb <- dfAggrIMean$interval[which.max(dfAggrIMean$steps)]
+stepsNb <- dfAggrIMean$steps[which.max(dfAggrIMean$steps)]
 ```
 Interval 835 contains the maximum number of steps, which is: 206 steps.
 
@@ -126,6 +125,13 @@ dfAggregated <- aggregate(steps ~ week+interval,data=df, FUN=mean)
 
 ```r
 library(ggplot2)
+```
+
+```
+## Error in library(ggplot2): there is no package called 'ggplot2'
+```
+
+```r
 ggplot(dfAggregated, aes(interval,steps)) +
     geom_line(aes(colour=week)) +
     facet_wrap(~week, ncol=1) +
@@ -133,7 +139,9 @@ ggplot(dfAggregated, aes(interval,steps)) +
     theme(strip.text.x = element_text(size = 15))
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+```
+## Error in eval(expr, envir, enclos): could not find function "ggplot"
+```
 
 It seems that on average, people walk more and more regulary accross the day during weekends.
 
