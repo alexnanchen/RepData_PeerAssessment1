@@ -122,5 +122,5 @@ Before imputing, the median was one unit lower, now both mean and median are the
         theme(strip.text.x = element_text(size = 15))
     ```
 
-It seems that on average, people walk more and more regulary accross the day during weekends.
+It seem    s that on average, people walk more and more regulary accross the day during weekends.
 

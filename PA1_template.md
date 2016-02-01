@@ -141,5 +141,5 @@ Before imputing, the median was one unit lower, now both mean and median are the
     
     ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
-It seems that on average, people walk more and more regulary accross the day during weekends.
+It seem    s that on average, people walk more and more regulary accross the day during weekends.
 
